@@ -1,3 +1,7 @@
+"""
+Copyright 2023 Constantijn van der Poel
+SPDX-License-Identifier: Apache-2.0
+"""
 rng_seed: 0
 
 ## Training loop parameters
@@ -14,7 +18,6 @@ hparams:
 chkpt:
   freq: ${val_task.freq}
   load: False
-  #dir: "/outputs/" #Will be prompted to edit this when code is run
 
 early_stopping:
   min_delta: 0.001
