@@ -1,0 +1,11 @@
+## Motzkin spin chain dataset
+name: "motzkin_spin"
+type: "motzkin"
+vocab_size: 3
+
+csv_id: "motzkin_data_valid" ## In main file, uses f"{seq_len}_ as prefix
+
+shuffle_train_ds: True
+
+train_size: 213366 ## Number of data to use in training set
+train_pos_frac: 1.0 ## Fraction of training data that are valid Motzkin chains

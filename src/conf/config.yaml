@@ -1,0 +1,46 @@
+rng_seed: 0
+
+## Training loop parameters
+num_epochs: 10
+
+hparams:
+    seq_len: 16 
+    start_per_dev_bs: 2
+    end_per_dev_bs: 2 #Danger of Mem overflow over 1024
+    bs_growth_len: 0 #in epochs
+    alpha: 0.0 ## Weight of norm term in loss
+    train_pos_frac: ${dataset.train_pos_frac}
+
+chkpt:
+  freq: ${val_task.freq}
+  load: False
+  #dir: "/outputs/" #Will be prompted to edit this when code is run
+
+early_stopping:
+  min_delta: 0.001
+  patience: 2
+
+log_steps: False #whether to log each step in an epoch
+log_lr: False #whether to log the learning rate each epoch
+tb_logging: True
+
+name: ??? ## Set name=dev for one epoch run
+hydra:
+  job:
+    chdir: True 
+  output_subdir: hydra
+  run:
+    dir: ../outputs/${now:%Y-%m-%d}/${name}
+  sweep:
+    dir: ../outputs/${now:%Y-%m-%d}/${name}
+    subdir: ${hydra.job.num}
+
+defaults:
+    - _self_
+    - dataset: motzkin
+    - model: dense_mps
+    - sched: warmup_constant
+    - optim: sgd
+    - val_task: valid_motzkin_prob_mass
+    - test_task: roc_auc
+    - override hydra/job_logging: custom #disabled

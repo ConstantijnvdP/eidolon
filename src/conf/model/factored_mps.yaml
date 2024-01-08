@@ -1,0 +1,12 @@
+## Init params for FactoredMPS model
+name: "factored_mps"
+init_params:
+    num_cores: ${hparams.seq_len}
+    vocab_size: ${dataset.vocab_size}
+    partial_len: 16
+    h_bond_dim: 3
+    boundary_var: 0.01
+    internal_var: 0.01
+    core_height: 2
+    v_bond_dim: 8
+    skip_connection: False

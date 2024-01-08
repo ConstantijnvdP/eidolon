@@ -1,0 +1,6 @@
+name: 'adam'
+params:
+  b1: 0.9
+  b2: 0.999
+  eps: 0.00000001
+  eps_root: 0.0

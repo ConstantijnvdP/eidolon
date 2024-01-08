@@ -1,0 +1,6 @@
+## Parameters for constant learning rate scheduler with warmup
+name: 'warmup_constant'
+params:
+  init_value : 0.00001
+  end_value : 0.0001
+  warmup_steps : 500

@@ -1,0 +1,9 @@
+## Init params for DenseMPS model
+name: "dense_mps"
+init_params:
+    num_cores: ${hparams.seq_len}
+    vocab_size: ${dataset.vocab_size}
+    partial_len: 16
+    h_bond_dim: 8
+    boundary_var: 0.01
+    internal_var: 0.01

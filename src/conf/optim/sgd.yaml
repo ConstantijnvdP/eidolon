@@ -1,0 +1,4 @@
+name: 'sgd'
+params:
+  momentum: 0.9
+  nesterov: False

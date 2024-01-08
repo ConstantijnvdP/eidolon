@@ -1,0 +1,5 @@
+name: "roc_auc"
+ds_size: 1000
+pos_frac: 0.5
+neg_ds_csv_id: "motzkin_data_invalid"
+batch_size: 1000

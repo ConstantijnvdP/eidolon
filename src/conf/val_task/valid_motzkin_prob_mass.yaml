@@ -1,0 +1,4 @@
+name: "valid_motzkin_prob_mass"
+freq: 1
+per_dev_bs: 8192
+early_stop_threshold: 0.99

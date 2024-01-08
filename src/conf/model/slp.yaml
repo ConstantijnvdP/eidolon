@@ -1,0 +1,6 @@
+## Init params for Single Layer Perceptron model
+name: "slp"
+init_params:
+    vocab_size: ${dataset.vocab_size}
+    embed_dim: 16
+    hidden_layer_size: 256
