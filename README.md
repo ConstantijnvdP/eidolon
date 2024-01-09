@@ -2,7 +2,7 @@
 *eidolon*: in ancient Greek mythology, an eidolon was the spirit-image of a living or deceased person.
 
 Here, tensor networks aim to capture the spirit of language-like data: the Motzkin spin chains.
-This code was written for my PhD thesis project under the supervision of Dr. David Schwab and John Terilla.
+This code was written for my PhD thesis project under the supervision of Dr. David Schwab and Dr. John Terilla.
 
 
 ## Running the learning loops
